@@ -15,18 +15,18 @@ class CreateAirportsTable extends Migration
     {
         Schema::create('airports', function (Blueprint $table) {
             $table->id();
-            $table->text("ident")->comment("NA");
-            $table->text("type")->comment("NA");
-            $table->text("name")->comment("NA");
-            $table->text("elevation_ft")->comment("NA");
-            $table->text("continent")->comment("NA");
-            $table->text("iso_country")->comment("NA");
-            $table->text("iso_region")->comment("NA");
-            $table->text("municipality")->comment("NA");
-            $table->text("gps_code")->comment("NA");
-            $table->text("iata_code")->comment("NA");
-            $table->text("local_code")->comment("NA");
-            $table->text("coordinates")->comment("NA");
+            $table->string("ident")->comment("NA");
+            $table->string("type")->comment("NA");
+            $table->string("name")->comment("NA");
+            $table->string("elevation_ft")->comment("NA");
+            $table->string("continent")->comment("NA");
+            $table->string("iso_country")->comment("NA");
+            $table->string("iso_region")->comment("NA");
+            $table->string("municipality")->comment("NA");
+            $table->string("gps_code")->comment("NA");
+            $table->string("iata_code")->comment("NA");
+            $table->string("local_code")->comment("NA");
+            $table->point("coordinates")->comment("NA");
             $table->softDeletes();
             $table->timestamps();
         });
